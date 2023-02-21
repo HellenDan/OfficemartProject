@@ -1,1 +1,1 @@
-# OfficemartProject consists only 3 test cases
+Project about https://officemart.ge/
