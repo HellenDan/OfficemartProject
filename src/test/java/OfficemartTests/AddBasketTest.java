@@ -26,7 +26,8 @@ public class AddBasketTest extends Utils.ChromeRunner {
                 .SearchText(Text)
                 .ClickEnter()
                 .AddCart();
-      //  Assert.assertTrue(steps.AddText.isDisplayed(), "Verify that 'პროდუქტი წარმატებით დაემატა კალათაში' is displayed");
+        sleep(200);
+      Assert.assertTrue(steps.AddText.isDisplayed());
     }
 
 
