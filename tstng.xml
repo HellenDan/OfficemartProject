@@ -1,25 +1,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Final Project Suite" thread-count="6" parallel="tests">
+<suite name="OfficemartProject" thread-count="3" parallel="tests">
 
-    <test name="TestSuite1" parallel="tests" >
+    <test name="Search1" group-by-instances="true" thread-count="1">
         <classes>
-            <class name="TbcPayTests.BalanceTopUpPageTest"/>
+            <class name="OfficemartTests.SearchButtonTest"/>
         </classes>
 
     </test>
 
-    <test name="TestSuite2" parallel="tests" >
+    <test name="AddBasket2" group-by-instances="true" thread-count="1">
         <classes>
-            <class name="TbcPayTests.VacancyPageTest"/>
+            <class name=" OfficemartTests.AddBasketTest"/>
         </classes>
 
     </test>
 
 
-    <test name="TestSuite3" parallel="tests" >
+    <test name="Invoice3" group-by-instances="true" thread-count="1">
         <classes>
-            <class name="TbcPayTests.BasketPageTest"/>
+            <class name="OfficemartTests.InvoiceTest"/>
         </classes>
 
     </test>

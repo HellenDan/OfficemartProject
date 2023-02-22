@@ -6,14 +6,10 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import javax.naming.directory.SearchResult;
-import static DataObject.SearchButtonObject.SearchIncorrect;
-import static DataObject.SearchButtonObject.SearchText;
-import static com.codeborne.selenide.Selectors.*;
+import static DataObject.SearchButtonObject.*;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
 
-public class SearchButton  extends Utils.ChromeRunner {
+public class SearchButtonTest extends Utils.ChromeRunner {
 
   SearchButtonSteps steps = new SearchButtonSteps();
 
@@ -37,8 +33,7 @@ public class SearchButton  extends Utils.ChromeRunner {
                 .clickSearchText()
                 .searchText(SearchText)
                 .searchBtnClick();
-        Assert.assertTrue(steps.searchText(SearchText).SearchButton.is(Condition.matchText(SearchText)));
-
+        Assert.assertTrue(steps.ResultTitle.is(Condition.text(ValidResult)));
     }
 
 
@@ -52,6 +47,6 @@ public class SearchButton  extends Utils.ChromeRunner {
                   .clickSearchText()
                   .searchText(SearchIncorrect)
                   .searchBtnClick();
-
+         Assert.assertTrue(steps.SearchResults.is(Condition.text(InvalidResult)));
         }
     }

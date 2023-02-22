@@ -6,7 +6,9 @@ public interface SearchButtonObject {
 
     SearchText = "კალამი ბურთულიანი",
     SearchIncorrect = "satesto",
-    Text = "კალამი ბურთულიანი";
-
+    Text = "კალამი ბურთულიანი",
+    NegativeText = "ვერაფერი მოიძებნა",
+    ValidResult = "კალამი ბურთულიანი",
+    InvalidResult = "ვერაფერი მოიძებნა";
 
 }

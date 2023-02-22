@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.w3c.dom.Text;
-
 import java.time.Duration;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -20,6 +19,7 @@ public class SearchButtonSteps extends SearchPage {
         return this;
 
     }
+
     @Step("Check Search")
     public  SearchButtonSteps checkSearch(){
         Search.shouldBe(Condition.visible);
