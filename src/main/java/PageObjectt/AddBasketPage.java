@@ -1,14 +1,17 @@
-package PageObject;
+package PageObjectt;
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+import static com.codeborne.selenide.Selectors.byClassName;
+import static com.codeborne.selenide.Selectors.byName;
+import static com.codeborne.selenide.Selenide.$;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-
-public class AddBasketPage {
+public interface AddBasketPage {
     public SelenideElement
-
             SearchButtonn = $(byClassName("waves-effect")),
             Search = $(byClassName("form_group")),
             SearchName = $(byName("search")),
@@ -19,9 +22,9 @@ public class AddBasketPage {
             ProductTitle = $(byClassName("item_title")),
             ProductColor = $(By.className("item_col")),
             ProductQuantity = $(By.name("quantity")),
-           ProductPrice = $(By.xpath("/html/body/div[5]/div/div[3]/div[6]/div[2]/span[1]")),
-           ProductFullPrice= $(By.xpath("/html/body/div[5]/div/div[3]/div[7]/div[2]/span[1]")),
-           IncreaseBtn = $(By.xpath("/html/body/div[5]/div/div[3]/div[5]/div/button[1]")),
+            ProductPrice = $(By.xpath("/html/body/div[5]/div/div[3]/div[6]/div[2]/span[1]")),
+            ProductFullPrice= $(By.xpath("/html/body/div[5]/div/div[3]/div[7]/div[2]/span[1]")),
+            IncreaseBtn = $(By.xpath("/html/body/div[5]/div/div[3]/div[5]/div/button[1]")),
             DecreaseBtn = $(By.xpath("/html/body/div[5]/div/div[3]/div[5]/div/button[2]")),
             DeleteProductBtn = $(By.xpath("/html/body/div[5]/div/div[3]/div[1]/button")),
             TotalPrice = $(By.id("totalPrice")),
@@ -31,11 +34,5 @@ public class AddBasketPage {
             ContinuePurchaseBtn = $(By.linkText("გაგრძელება")),
             JuridicalFormText = $(By.id("pis")),
             PhysicalFormText = $(By.id("iur"));
-
-
-
-
-
-
-
 }
+

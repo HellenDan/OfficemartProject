@@ -8,11 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import static DataObject.SearchButtonObject.*;
 import static com.codeborne.selenide.Selenide.$;
-
 public class SearchButtonTest extends Utils.ChromeRunner {
-
   SearchButtonSteps steps = new SearchButtonSteps();
-
    @Test
    @Description("Test Case 1 Click Search Button With Positive Case")
    @Severity(SeverityLevel.CRITICAL)
@@ -21,8 +18,6 @@ public class SearchButtonTest extends Utils.ChromeRunner {
                .checkSearch();
        Assert.assertTrue(steps.Search.is(Condition.appear));
    }
-
-
     @Test
     @Description("Test Case 2  Search Text  With Positive Case")
     @Severity(SeverityLevel.CRITICAL)
@@ -33,9 +28,6 @@ public class SearchButtonTest extends Utils.ChromeRunner {
                 .searchBtnClick();
         Assert.assertTrue(steps.ResultTitle.is(Condition.text(ValidResult)));
     }
-
-
-
     @Test
     @Description("Test Case 3 Search Text  With Negative Case")
     @Severity(SeverityLevel.CRITICAL)

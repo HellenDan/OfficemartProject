@@ -1,6 +1,8 @@
 package OfficemartTests;
+import PageObjectt.AddBasketPage;
 import StepObject.AddBasketPageSteps;
 import StepObject.SearchButtonSteps;
+import Utils.ChromeRunner;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -11,11 +13,8 @@ import static DataObject.AddBasketObject.NotificationText;
 import static DataObject.SearchButtonObject.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
-
-public class AddBasketTest extends Utils.ChromeRunner {
-
+public class AddBasketTest extends ChromeRunner implements AddBasketPage {
     AddBasketPageSteps steps = new AddBasketPageSteps();
-
     @Test
     @Description("Test Case 4 Add Product to the basket ")
     @Severity(SeverityLevel.CRITICAL)
@@ -39,7 +38,6 @@ public class AddBasketTest extends Utils.ChromeRunner {
                 .AddCart()
                 .GoToCart();
         Assert.assertTrue(steps.ProductTitle.is(Condition.not(Condition.empty)));
-
     }
     @Test
     @Description("Test Case 6 Check Product Color")
