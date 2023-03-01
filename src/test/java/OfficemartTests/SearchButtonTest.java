@@ -16,8 +16,7 @@ public class SearchButtonTest extends Utils.ChromeRunner {
    @Test
    @Description("Test Case 1 Click Search Button With Positive Case")
    @Severity(SeverityLevel.CRITICAL)
-
-  public void ClickSearchButton(){
+    public void ClickSearchButton(){
        steps.clickSearchBtn()
                .checkSearch();
        Assert.assertTrue(steps.Search.is(Condition.appear));
@@ -27,7 +26,6 @@ public class SearchButtonTest extends Utils.ChromeRunner {
     @Test
     @Description("Test Case 2  Search Text  With Positive Case")
     @Severity(SeverityLevel.CRITICAL)
-
     public void SearchCorrectInfo() {
         steps.clickSearchBtn()
                 .clickSearchText()
@@ -41,7 +39,6 @@ public class SearchButtonTest extends Utils.ChromeRunner {
     @Test
     @Description("Test Case 3 Search Text  With Negative Case")
     @Severity(SeverityLevel.CRITICAL)
-
     public void SearchIncorrectInfo() {
          steps.clickSearchBtn()
                   .clickSearchText()

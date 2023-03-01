@@ -46,6 +46,50 @@ public class AddBasketPageSteps extends AddBasketPage {
         CartBtn.click();
         return this;
     }
+    @Step("Increase Product Quantity")
+    public AddBasketPageSteps IncreaseQuantity(){
+        IncreaseBtn.click();
+        return this;
+    }
+    @Step("Get Actual Price ")
+    public double GetActualPrice(){
+        return Double.parseDouble(ProductPrice.getOwnText());
+    }
+    @Step("Get Increased Price ")
+    public double GetFullPrice(){
+        return Double.parseDouble(ProductFullPrice.getOwnText());
+    }
+    @Step("Decrease Product Quantity")
+    public AddBasketPageSteps DecreaseQuantity(){
+        DecreaseBtn.click();
+        return this;
+    }
+    @Step("Delete Product")
+    public AddBasketPageSteps DeleteProduct(){
+        DeleteProductBtn.click();
+        return this;
+    }
+    @Step("Get Total Price Of The Product")
+    public double GetTotalPrice(){
+        return Double.parseDouble(TotalPrice.getOwnText());
+    }
+    @Step("All Clear Basket")
+    public AddBasketPageSteps ClearCartBtn(){
+        ClearCartBtn.click();
+        return this;
+    }
+    @Step("Continue Purchase")
+    public AddBasketPageSteps ContinuePurchase(){
+        ContinuePurchaseBtn.click();
+        return this;
+    }
+
+
+
+
+
+
+
 
 
 
